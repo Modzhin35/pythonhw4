@@ -6,11 +6,11 @@
 import random
 
 n=int(input('Введите размер первого массива: '))
-first = [random.randint(1,15) for i in range(n)]
+first = [random.randint(1,5) for i in range(n)]
 print(f'Получилась такая последовательность: {first}')
 m = int(input('Введите размер второго массива: '))
-second=[random.randint(1,15) for i in range(m)]
+second=[random.randint(1,5) for i in range(m)]
 print(f'Получилась такая последовательность: {second}')
 first, second = set(first), set(second)
-result = first.union(second)
-print(f'Уникальные элементы 2-х массивов в порядке возрастания: {result}')
+result = first.intersection(second)
+print(f'Числа, которые встречаются в обоих массивах: {result}')
